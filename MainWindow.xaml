@@ -1,0 +1,79 @@
+﻿<Window x:Class="IO_LAB3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IO_LAB3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="269*"/>
+        </Grid.RowDefinitions>
+
+
+        <Button x:Name="MenuButton" Content="Menu" HorizontalAlignment="Center" Margin="0,2,0,0" VerticalAlignment="Top" Width="517" Click="MenuButton_Click" Height="20"/>
+        <Button x:Name="ukryjButton" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;" HorizontalAlignment="Left" Margin="6,26,0,0" VerticalAlignment="Top" Width="61" Click="ukryjButton_Click" Height="20"/>
+        <Button x:Name="PrzeslanieButton" FontFamily="Segoe MDL2 Assets" Content="&#xE898;" HorizontalAlignment="Left" Margin="80,26,0,0" VerticalAlignment="Top" Width="61" Height="20" Click="PrzeslanieButton_Click"/>
+        <Button x:Name="KontrolaButton" FontFamily="Segoe MDL2 Assets" Content="&#xE8F7;" HorizontalAlignment="Left" Margin="153,26,0,0" VerticalAlignment="Top" Width="61" Height="20" Click="KontrolaButton_Click"/>
+        <Button x:Name="ZapisButton" FontFamily="Segoe MDL2 Assets" Content="&#xE74E;" HorizontalAlignment="Left" Margin="225,26,0,0" VerticalAlignment="Top" Width="61" Height="20" Click="ZapisButton_Click"/>
+        <Button x:Name="OdzczytButton" FontFamily="Segoe MDL2 Assets" Content="&#xE896;" HorizontalAlignment="Left" Margin="299,26,0,0" VerticalAlignment="Top" Width="61" Height="20" Click="OdzczytButton_Click"/>
+        <Button x:Name="PomocButton" FontFamily="Segoe MDL2 Assets" Content="&#xE897;" HorizontalAlignment="Left" Margin="373,26,0,0" VerticalAlignment="Top" Width="61" Height="20" Click="PomocButton_Click"/>
+        <Button x:Name="InformacjeButton" FontFamily="Segoe MDL2 Assets" Content="&#xE8C9;" HorizontalAlignment="Left" Margin="448,26,0,0" VerticalAlignment="Top" Width="61" Height="20" Click="InformacjeButton_Click"/>
+
+
+        <DockPanel x:Name="ListaAnkiet" HorizontalAlignment="Left" Height="269" LastChildFill="False" Margin="1,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="152" Background="Green">
+            <ListView x:Name="listView" Height="269" VerticalAlignment="Top" Width="154">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+                <ListViewItem Content="Ankieta1" Margin="0"/>
+                <ListViewItem Content="Ankieta2" Margin="0"/>
+                <ListViewItem Content="Ankieta3" Margin="0"/>
+            </ListView>
+
+        </DockPanel>
+
+        <TabControl x:Name="tabControl" Height="269" VerticalAlignment="Top" Width="364" Visibility="Visible" Margin="153,0,0,0" Grid.Row="1">
+            <TabItem Header="TabPage1">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="Adres" Margin="68,8,65,208" Text="Adres" TextAlignment="Center"/>
+                    <TextBox x:Name="Telefon" Margin="68,40,65,176" Text="Telefon" TextAlignment="Center"/>
+                    <TextBox x:Name="Nip" Margin="68,72,65,144" Text="Nip" TextAlignment="Center"/>
+                    <TextBox x:Name="Regon" Margin="68,104,65,111" Text="Regon Ankietowanej Firmy" TextAlignment="Center"/>
+                    <TextBox x:Name="Osoba" Margin="68,137,65,79" Text="Osoba kontaktowa w firmie" TextAlignment="Center"/>
+                    <TextBox x:Name="AdresOsoby" Margin="68,169,65,47" Text="Adres osoby kontaktowa w firmie" TextAlignment="Center"/>
+                    <TextBox x:Name="TelefonOsoby" Margin="68,201,65,15" Text="Telefon osoby kontaktowa w firmie" TextAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabPage2">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="NazwaOprogramowaniaBiurowego" Margin="20,31,10,175" Text="Nazwa oprogramowania biurowego" TextAlignment="Center"/>
+                    <TextBox x:Name="AutorOprogramowaniaBiurowego" Margin="20,75,10,131" Text="Autor oprogramowania biurowego" TextAlignment="Center"/>
+                    <TextBox x:Name="NazwaOprogramowaniaPrzedsiebiorstwo" Margin="20,119,10,86" Text="Nazwa oprogramowania do zarządzania przedsiębiorstwem" TextAlignment="Center"/>
+                    <TextBox x:Name="AutorOprogramowaniaPrzedsiebiorstwo" Margin="20,164,10,41" Text="Autor oprogramowania do zarządzania przedsiębiorstwem" TextAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabPage3">
+                <Grid>
+                    
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <Menu x:Name="menuMenu" HorizontalAlignment="Center" Height="89" Margin="226,23,225,0" VerticalAlignment="Top" Width="66" Grid.RowSpan="2" Visibility="Collapsed" Background="Gray">
+            <Button x:Name="PlikButton" Width="50" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Plik" />
+            <Button x:Name="EdycjaButton" Width="50" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Edycja"/>
+            <Button x:Name="WidokButon" Width="50" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Widok"/>
+            <Button x:Name="WyjscieButton" Content="Wyjscie" HorizontalAlignment="Center" VerticalAlignment="Top" Width="50" Click="WyjscieButton_Click" Height="20"/>
+        </Menu>
+
+
+
+
+    </Grid>
+</Window>
